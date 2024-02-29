@@ -4,10 +4,10 @@ const sql = require("mysql");
 
 const connection = sql.createConnection({
 
-host:"aqibproject.000webhostapp.com",
-user:"id19662667_aqibak786",
-password:"Aqib@ak786",
-database:"id19662667_myportfolio"
+host:"sql104.infinityfree.com",
+user:"if0_36071557",
+password:"PEq4HHaOdaEi",
+database:"if0_36071557_portfolio"
 
 });
 
