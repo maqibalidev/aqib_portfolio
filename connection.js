@@ -1,35 +1,25 @@
-const mongoose = require("mongoose");
-// Connect to MongoDB
-mongoose.connect("mongodb+srv://aqib:aqibak786@cluster0.mqhckvx.mongodb.net/portfolio", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
+
+const sql = require("mysql");
+
+
+const connection = sql.createConnection({
+
+host:process.env.HOST,
+user:process.env.USER,
+password:process.env.PASSWORD,
+database:process.env.DB
+
 });
-const db = mongoose.connection;
 
+connection.connect((error)=>{
 
-// const sql = require("mysql");
+    if (error) {
+        console.log("conncection error",error);
+    }
+else{
+    console.log("connected to database");
+}
 
+});
 
-// const connection = sql.createConnection({
-
-// host:"aqibportfolio.42web.io",
-// user:"if0_36071557",
-// password:"PEq4HHaOdaEi",
-// database:"if0_36071557_portfolio"
-
-// });
-
-// connection.connect((error)=>{
-
-//     if (error) {
-//         console.log("conncection error",error);
-//     }
-// else{
-//     console.log("connected to database");
-// }
-
-// });
-
-// module.exports = connection;
-
-module.exports = db;
+module.exports = connection;
