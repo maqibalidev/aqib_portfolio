@@ -14,7 +14,7 @@ database:"id19662667_myportfolio"
 connection.connect((error)=>{
 
     if (error) {
-        console.log("conncection error",error);
+        console.log("conncection error");
     }
 else{
     console.log("connected to database");
