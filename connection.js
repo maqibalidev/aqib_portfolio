@@ -4,7 +4,7 @@ const sql = require("mysql");
 
 const connection = sql.createConnection({
 
-host:"sql104.infinityfree.com",
+host:"aqibportfolio.42web.io",
 user:"if0_36071557",
 password:"PEq4HHaOdaEi",
 database:"if0_36071557_portfolio"
